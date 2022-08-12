@@ -16,37 +16,36 @@
 	<div class="example-wrapper">
 		<h1>Hello ! ✅</h1>
 
-		Lucky Number is {{ lucky_number }} !
+		Lucky Number is
+		{{ lucky_number }}
+		!
 
 		<div>
 			<button type="button" class="btn btn-primary">Primary</button>
-		<div>
-		<div class="dropdown dropup">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-                <li>
-                    <a class="dropdown-item" href="#">Action</a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">Another action</a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
-        </div>
-        <div>
-        <button type="button" class="btn btn-secondary"
-        data-bs-toggle="tooltip" data-bs-placement="top"
-        data-bs-custom-class="custom-tooltip"
-        data-bs-title="This top tooltip is themed via CSS variables.">
-            Custom tooltip
-        </button>
-        </div>
-    </div>
-{% endblock %}
+			<div>
+				<div class="dropdown dropup">
+					<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Dropdown button
+					</button>
+					<ul class="dropdown-menu">
+						<li>
+							<a class="dropdown-item" href="#">Action</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">Another action</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="#">Something else here</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+				</div>
+				<div>
+					<button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="This top tooltip is not themed via CSS variables.">
+						Custom tooltip
+					</button>
+				</div>
+			</div>
+		{% endblock %}

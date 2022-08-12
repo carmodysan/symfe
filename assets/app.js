@@ -8,8 +8,16 @@
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
 
-// You can specify which plugins you need
-import { Tooltip, Toast, Popover } from 'bootstrap';
+// Bootstrap
+const bootstrap = require('bootstrap')
 
 // start the Stimulus application
 import './bootstrap';
+
+// Tooltip for Bootstrap
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+// Popover for Bootstrap
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
