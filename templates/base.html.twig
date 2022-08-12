@@ -30,8 +30,58 @@
 		{% endblock %}
 	</head>
 	<body>
-        <div class="fe-main">
-            {% block body %}{% endblock %}
+        <div class="fe-main container-fluid pa-0">
+            <div class="row">
+                <nav class="navbar sticky-top navbar-expand-xl shadow">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="/">FacilEpargne</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Finance</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="/finance">Tableau de bord</a></li>
+                                        <li><a class="dropdown-item" href="#">Impôts</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Paramètre</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/blog">Blog</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Peinture</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Warhammer</a></li>
+                                        <li><a class="dropdown-item" href="#">Deadzone</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#">Galerie</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <div class="d-flex align-items-center">
+                                <ul class="navbar-nav me-auto mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/login">Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/register">Register</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="container">
+                    {% block body %}{% endblock %}
+                </div>
+            </div>
         </div>
 	</body>
 </html>
