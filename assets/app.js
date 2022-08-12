@@ -21,3 +21,13 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 // Popover for Bootstrap
 const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+// Ajoute de l'ombre à la navbar dès qu'on scroll
+window.addEventListener('scroll',(e)=>{
+  const nav = document.querySelector('.navbar');
+  if(window.pageYOffset>0){
+    nav.classList.add("shadow");
+  }else{
+    nav.classList.remove("shadow");
+  }
+});
